@@ -1,0 +1,14 @@
+{
+  "outputDirectory": "web",
+  "functions": {
+    "api/ask.py": {
+      "maxDuration": 30
+    },
+    "api/places.py": {
+      "maxDuration": 20
+    },
+    "api/suggest.py": {
+      "maxDuration": 10
+    }
+  }
+}

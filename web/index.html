@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sethu Map — Location Intelligence for Hyderabad</title>
+<meta name="description" content="Explainable flood, lake, facility and market-rate reports for any Hyderabad address — for buyers, agents and insurers.">
+<link rel="stylesheet" href="vendor/leaflet.css">
+<link rel="stylesheet" href="platform/styles.css">
+</head>
+<body>
+<header class="topbar">
+  <button class="logo" id="logo" aria-label="Sethu Map home"><div><b>Sethu Map</b><span>Location intelligence for Hyderabad</span></div></button>
+  <div class="search">
+    <span class="ico">🔍</span>
+    <input id="q" placeholder="Search a place — or paste a Google Maps link" autocomplete="off" aria-label="Search a location">
+    <button class="sbtn loc" id="locBtn" title="Use my location" aria-label="Use my location">📍</button>
+    <button class="sbtn go" id="goBtn">Search</button>
+    <div class="sug" id="sug"></div>
+  </div>
+  <div class="actions">
+    <button class="btn ghost sm" id="engBtn">⚙ Engine</button>
+    <button class="btn ghost sm" id="qrBtn">📱 QR</button>
+    <a class="btn ghost sm" href="planner.html">🌧 Flood Planner</a>
+  </div>
+</header>
+
+<main class="screen">
+  <div id="map" aria-label="Map"></div>
+  <div class="maptools" id="maptools">
+    <button class="chip" data-t="mode" data-mode="flood">Colour: flood rank</button>
+    <button class="chip on" data-t="wards">Risk map</button>
+    <button class="chip on" data-t="lakes">Lakes</button>
+    <button class="chip" data-t="tanks">Tank encroachment</button>
+    <button class="chip" data-t="nalas">Nalas</button>
+    <button class="chip" data-t="spots">Listed flood spots</button>
+    <button class="chip" data-t="drains">Drains</button>
+    <button class="chip" data-t="hospital">🏥 Hospitals</button>
+    <button class="chip" data-t="school">🏫 Schools</button>
+    <button class="chip" data-t="metro">🚇 Transit</button>
+    <button class="chip" data-t="fire">🚒 Fire</button>
+    <button class="chip" data-t="sat">🛰 Satellite</button>
+  </div>
+  <div class="maplegend" id="maplegend"><b>Flood-susceptibility rank</b><div class="ramp"></div><div class="rr"><span>lower</span><span>higher</span></div></div>
+  <aside class="dock" id="dock"></aside>
+  <section class="report hide" id="report" aria-label="Report"></section>
+</main>
+
+<div class="modal" id="modal"><div class="mbox" id="mc"></div></div>
+<div class="toast" id="toast" role="status"></div>
+
+<script src="vendor/leaflet.js"></script>
+<script src="vendor/qrcode.min.js"></script>
+<script src="platform/engine.js"></script>
+<script src="platform/charts.js"></script>
+<script src="platform/map.js"></script>
+<script src="platform/reports.js"></script>
+<script src="platform/app.js"></script>
+</body>
+</html>

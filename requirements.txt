@@ -1,0 +1,13 @@
+numpy
+pandas
+requests
+python-dotenv
+geopandas
+rasterio
+shapely
+rasterstats
+pyproj
+networkx
+groq
+scikit-learn
+pysheds
